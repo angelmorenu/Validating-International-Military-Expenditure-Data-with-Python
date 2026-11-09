@@ -14,6 +14,8 @@ This project turns military-spending analysis into a reproducible **data-quality
   - percentage growth from first to last observed year
   - compound annual growth rate (CAGR)
 - generating a 2025 country expenditure distribution chart
+- reporting the three zero-expenditure 2025 observations separately because
+  they are included in descriptive statistics but omitted from the logarithmic chart
 
 ## Run
 
@@ -36,7 +38,15 @@ Optional arguments:
 
 ## Plain-language interpretation
 
-This program checks a military-spending dataset for missing, duplicate, and invalid records before calculating summary results. It separates country records from aggregate totals and then shows how spending is distributed across countries in 2025. It also calculates long-term growth using the first and last observed world values so trend results are based on actual data, not hard-coded figures.
+This program reviewed 9,112 records and detected no invalid years, invalid
+spending values, or duplicate country-year entries under its validation rules.
+It excluded 771 aggregate or unclassified records from country analysis. For
+2025, 150 eligible country observations had average expenditure of approximately
+$18.266 billion and a median of $1.285 billion; three zero-expenditure
+observations are included in those statistics but omitted from the logarithmic
+histogram. Worldwide expenditure increased by 57.47% between 1988 and 2025,
+equivalent to compound annual growth of 1.23%. These checks assess record
+consistency, not the independent accuracy of the source figures.
 
 ## Source and limitations
 

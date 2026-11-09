@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\pagestyle{empty}
+
+\begin{document}
+
+\includepdf[
+  pages=-,
+  fitpaper=true
+]{Validating International Military Expenditure Data with Python.pdf}
+
+\newpage
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+  \node[
+    align=center,
+    text width=0.82\paperwidth,
+    font=\sffamily\bfseries\Huge
+  ] at (current page.center) {
+    Appendix A\\[1.2em]
+    Python Program and\\
+    Executed Results
+  };
+\end{tikzpicture}
+\newpage
+
+\includepdf[
+  pages=-,
+  fitpaper=true
+]{sipri_military_expenditure_analysis.pdf}
+
+\end{document}
